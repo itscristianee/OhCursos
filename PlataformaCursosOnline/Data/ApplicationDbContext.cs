@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PlataformaCursosOnline.Models;
 
 namespace PlataformaCursosOnline.Data;
 
@@ -9,4 +10,8 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+    
+   
+    
+    
 }
