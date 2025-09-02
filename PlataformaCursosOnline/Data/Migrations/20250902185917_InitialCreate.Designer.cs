@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PlataformaCursosOnline.Data;
@@ -11,9 +12,11 @@ using PlataformaCursosOnline.Data;
 namespace PlataformaCursosOnline.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250902185917_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -237,7 +240,7 @@ namespace PlataformaCursosOnline.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorias", (string)null);
+                    b.ToTable("Categorias");
                 });
 
             modelBuilder.Entity("PlataformaCursosOnline.Models.Cursos", b =>
@@ -275,7 +278,7 @@ namespace PlataformaCursosOnline.Migrations
 
                     b.HasIndex("FormadorFK");
 
-                    b.ToTable("Cursos", (string)null);
+                    b.ToTable("Cursos");
                 });
 
             modelBuilder.Entity("PlataformaCursosOnline.Models.Inscricoes", b =>
@@ -301,7 +304,7 @@ namespace PlataformaCursosOnline.Migrations
 
                     b.HasIndex("UtilizadorFK");
 
-                    b.ToTable("Inscricoes", (string)null);
+                    b.ToTable("Inscricoes");
                 });
 
             modelBuilder.Entity("PlataformaCursosOnline.Models.Utilizadores", b =>
@@ -345,7 +348,7 @@ namespace PlataformaCursosOnline.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Utilizadores", (string)null);
+                    b.ToTable("Utilizadores");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

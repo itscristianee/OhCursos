@@ -40,7 +40,7 @@ public class Inscricoes
     [Display(Name = "Utilizador")]
     [Required(ErrorMessage = "O {0} é de preenchimento obrigatório")]
     [ForeignKey(nameof(Utilizador))]
-    public string UtilizadorFK { get; set; } = null!;
+    public int UtilizadorFK { get; set; } 
 
     /// <summary>
     /// Navegação para o utilizador (Identity).

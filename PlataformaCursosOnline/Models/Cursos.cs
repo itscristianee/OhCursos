@@ -66,7 +66,7 @@ public class Cursos
     [Display(Name = "Formador")]
     [Range(1, int.MaxValue, ErrorMessage = "Selecione uma {0} válida")]
     [ForeignKey(nameof(Formador))]
-    public string FormadorFK { get; set; }
+    public int FormadorFK { get; set; }
     
     /// <summary>
     /// Navegação para o Formador (não validar no binding).
